@@ -24,7 +24,7 @@ public class employeecontro {
         this.r = employeerepo;
     }
 
-    @PostMapping("/employees")
+    @PostMapping("/employeesadd")
     @ResponseStatus(HttpStatus.CREATED)
     public Employee addemployee(@RequestBody Employee employee) {
         return r.save(employee);
@@ -54,6 +54,27 @@ public class employeecontro {
 //        return ResponseEntity.ok(updatedEmployee);
 //
 //    }
+    @PutMapping ("employees/{id}")
+    public ResponseEntity<Employee>update_employe(@RequestBody Employee newdata , @PathVariable int id)throws ResourceNotFoundException{
+        Employee employecherche=r.findById(id).orElseThrow(()->new ResourceNotFoundException("Employee not found with id:"+id));
+        employecherche.setName(newdata.getName());
+        employecherche.setPhone(newdata.getPhone());
+        employecherche.setEmail(newdata.getEmail());
+        employecherche.setDepartement(newdata.getDepartement());
+        r.save(employecherche);
+        return ResponseEntity.ok(employecherche);
+    }
+
+
+
+
+
+
+
+
+
+
+
     @DeleteMapping("/employees/{id}")
     public Map<String, Boolean> deleteEmployee(@PathVariable(value = "id") Integer employeeId)
             throws ResourceNotFoundException {

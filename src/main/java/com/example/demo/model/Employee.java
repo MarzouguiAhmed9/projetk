@@ -38,4 +38,24 @@ public class Employee {
     public String getDepartement() {
         return departement;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    public void setDepartement(String departement) {
+        this.departement = departement;
+    }
 }
