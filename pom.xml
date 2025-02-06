@@ -70,7 +70,7 @@
 
 	<build>
 		<plugins>
-			<!-- Maven Compiler Plugin for Lombok Annotations -->
+			<!-- Maven Compiler Plugin for Lombok Annotationsh -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
