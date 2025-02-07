@@ -1,0 +1,93 @@
+// General Panel Styling
+.panel-primary {
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+
+  .panel-heading {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .panel-body {
+    padding: 20px;
+  }
+}
+
+// Table Styling
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  thead {
+    background: #007bff;
+    color: white;
+
+    th {
+      padding: 12px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+  tbody {
+    tr {
+      transition: background 0.3s;
+
+      &:hover {
+        background: rgba(0, 123, 255, 0.1);
+      }
+
+      td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+  }
+}
+
+// Button Styling
+.btn {
+  border: none;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &.btn-danger {
+    background: #dc3545;
+    color: white;
+
+    &:hover {
+      background: darkred;
+    }
+  }
+
+  &.btn-success {
+    background: #28a745;
+    color: white;
+
+    &:hover {
+      background: darkgreen;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}

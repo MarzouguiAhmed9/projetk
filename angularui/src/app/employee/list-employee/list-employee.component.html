@@ -1,0 +1,35 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2><i class="fas fa-users"></i> Employee List</h2>
+  </div>
+
+  <div class="panel-body">
+    <table id="example" class="table">
+      <thead>
+      <tr>
+        <th><i class="fas fa-user"></i> Name</th>
+        <th><i class="fas fa-envelope"></i> Email</th>
+        <th><i class="fas fa-building"></i> Department</th>
+        <th><i class="fas fa-phone"></i> Phone</th>
+        <th><i class="fas fa-cogs"></i> Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.departement }}</td>
+        <td>{{ employee.phone }}</td>
+        <td>
+          <button class="btn btn-danger">
+            <i class="fas fa-trash-alt"></i> Delete
+          </button>
+          <button class="btn btn-success">
+            <i class="fas fa-edit"></i> Edit
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
