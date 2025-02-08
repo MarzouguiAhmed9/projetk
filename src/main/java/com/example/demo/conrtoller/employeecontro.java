@@ -43,17 +43,17 @@ public class employeecontro {
 
     }
 
-//    @PostMapping("/employees/{id}")
-//    public ResponseEntity<Employee> updateEmployee(@PathVariable int id, @RequestBody Employee employeeDetails) throws ResourceNotFoundException {
-//        Employee employee = r.findById(id).orElseThrow(() -> new ResourceNotFoundException("Employee not found with id :" + id));
-//         employee.setName(employeeDetails.getName());
-//         employee.setPhone(employeeDetails.getPhone());
-//         employee.setEmail(employeeDetails.getEmail());
-//         employee.setDepartement(employeeDetails.getDepartement());
-//        final Employee updatedEmployee = r.save(employee);
-//        return ResponseEntity.ok(updatedEmployee);
-//
-//    }
+    @PostMapping("/employees/{id}")
+    public ResponseEntity<Employee> updateEmployee(@PathVariable int id, @RequestBody Employee employeeDetails) throws ResourceNotFoundException {
+        Employee employee = r.findById(id).orElseThrow(() -> new ResourceNotFoundException("Employee not found with id :" + id));
+         employee.setName(employeeDetails.getName());
+         employee.setPhone(employeeDetails.getPhone());
+         employee.setEmail(employeeDetails.getEmail());
+         employee.setDepartement(employeeDetails.getDepartement());
+        final Employee updatedEmployee = r.save(employee);
+        return ResponseEntity.ok(updatedEmployee);
+
+    }
     @PutMapping ("employees/{id}")
     public ResponseEntity<Employee>update_employe(@RequestBody Employee newdata , @PathVariable int id)throws ResourceNotFoundException{
         Employee employecherche=r.findById(id).orElseThrow(()->new ResourceNotFoundException("Employee not found with id:"+id));
