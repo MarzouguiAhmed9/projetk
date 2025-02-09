@@ -1,0 +1,10 @@
+services:
+  angular-service:
+    container_name: angularcon1
+    build: ./  # Build the image from the current directory
+    volumes:
+      - './:/usr/src/app'  # Use relative path instead of absolute Windows path
+    ports:
+      - "4201:4200"  # Expose port 4200
+    command: >
+      bash -c "npm start"  # Start the Angular app
